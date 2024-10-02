@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Public+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Home Security: Login</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body class="bg-[#111a22] text-white font-sans">
+    <div class="flex flex-col min-h-screen justify-between overflow-x-hidden">
+      <header class="flex items-center p-4 pb-2 bg-[#111a22]">
+        <div class="flex items-center justify-end w-12">
+          <button class="flex items-center justify-center w-12 h-12 text-white bg-transparent rounded-xl backButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="flex items-center justify-center flex-1">
+        <div class="w-full max-w-md p-8 space-y-8 bg-[#243647] rounded-lg shadow-md">
+          <div class="text-center">
+            <h2 class="text-2xl font-bold">Login</h2>
+            <p class="mt-2 text-sm text-[#93adc8]">Sign in to your account</p>
+          </div>
+          <form class="space-y-6">
+            <div>
+              <label for="email" class="block text-sm font-medium">Email address</label>
+              <input id="email" name="email" type="email" required class="w-full px-3 py-2 mt-1 bg-[#111a22] text-white border-none rounded-md shadow-sm focus:outline-none focus:ring-blue-500 sm:text-sm">
+            </div>
+            <div>
+              <label for="password" class="block text-sm font-medium">Password</label>
+              <input id="password" name="password" type="password" required class="w-full px-3 py-2 mt-1 bg-[#111a22] text-white border-none rounded-md shadow-sm focus:outline-none focus:ring-blue-500 sm:text-sm">
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center">
+                <input id="remember_me" name="remember_me" type="checkbox" class="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                <label for="remember_me" class="block ml-2 text-sm">Remember me</label>
+              </div>
+              <div class="text-sm">
+                <a href="#" class="font-medium text-blue-600 hover:text-blue-500">Forgot your password?</a>
+              </div>
+            </div>
+            <div>
+              <button 
+              type="button" 
+              class="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 signInButton"
+              onclick="location.href='dashboard.html'"
+              >Sign in</button>
+            </div>
+          </form>
+          <div class="text-sm text-center">
+            <p>Don't have an account? <a href="register.html" class="font-medium text-blue-600 hover:text-blue-500">Sign up</a></p>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="h-5 bg-[#111a22]"></div>
+      </footer>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
