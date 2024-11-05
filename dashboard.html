@@ -20,26 +20,42 @@
       <div class="content-wrapper">
         <div class="flex items-center bg-[#111a22] p-4 pb-2 justify-between ">
         <div class="flex w-12 items-center justify-end">
-          <button class="flex items-center justify-center w-12 h-12 text-white bg-transparent rounded-xl backButton">
+
+          <span class="flex items-center justify-center w-12 h-12 text-white bg-transparent rounded-xl backButton">
             <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
               <path d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"></path>
             </svg>
-          </button>
+          </span>
+
         </div>
         </div>
         <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 container-centered">Alarm</h2>
+
         <div class="flex items-center gap-4 bg-[#111a22] px-4 min-h-14 container-centered">
-        <div class="text-white flex items-center justify-center rounded-lg bg-[#243647] shrink-0 size-10" data-icon="LockOpen" data-size="24px" data-weight="regular">
+
+          <div
+          id="iconContainer"
+          class="icon-alarm text-white flex items-center justify-center rounded-lg bg-[#243647] shrink-0 size-10"
+          data-icon="LockOpen"
+        >
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
-            <path
-              d="M208,80H96V56a32,32,0,0,1,32-32c15.37,0,29.2,11,32.16,25.59a8,8,0,0,0,15.68-3.18C171.32,24.15,151.2,8,128,8A48.05,48.05,0,0,0,80,56V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80Zm0,128H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"
-            ></path>
+            <path id="iconPath" d="M208,80H96V56a32,32,0,0,1,32-32c15.37,0,29.2,11,32.16,25.59a8,8,0,0,0,15.68-3.18C171.32,24.15,151.2,8,128,8A48.05,48.05,0,0,0,80,56V80H48A16,16,0,0,0,32,96V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V96A16,16,0,0,0,208,80Zm0,128H48V96H208V208Zm-68-56a12,12,0,1,1-12-12A12,12,0,0,1,140,152Z"></path>
           </svg>
         </div>
-        <p class="text-white text-base font-normal leading-normal flex-1 truncate">Armed Away</p>
+
+        <button
+        class="DisableBtn flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[#1466b8] text-white text-base font-bold leading-normal tracking-[0.015em] grow"
+      >
+        <span class="truncate">Disable</span>
+      </button>
+
+        <p class="alarm text-white text-base font-normal leading-normal flex-1 truncate"></p>
         </div>
+
         <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 container-centered">History</h2>
+
         <div class="flex items-center gap-4 bg-[#111a22] px-4 min-h-[72px] py-2 container-centered">
+
         <div class="text-white flex items-center justify-center rounded-lg bg-[#243647] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -47,12 +63,16 @@
             ></path>
           </svg>
         </div>
+
         <div class="flex flex-col justify-center">
           <p class="text-white text-base font-medium leading-normal line-clamp-1">Front door</p>
-          <p class="text-[#93adc8] text-sm font-normal leading-normal line-clamp-2">11:23AM</p>
+          <p class="frontDoorHour text-[#93adc8] text-sm font-normal leading-normal line-clamp-2"></p>
         </div>
+
         </div>
+
         <div class="flex items-center gap-4 bg-[#111a22] px-4 min-h-[72px] py-2 container-centered">
+
         <div class="text-white flex items-center justify-center rounded-lg bg-[#243647] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -60,12 +80,16 @@
             ></path>
           </svg>
         </div>
+
         <div class="flex flex-col justify-center">
           <p class="text-white text-base font-medium leading-normal line-clamp-1">Garage door</p>
           <p class="text-[#93adc8] text-sm font-normal leading-normal line-clamp-2">11:03AM</p>
         </div>
+
         </div>
+
         <div class="flex items-center gap-4 bg-[#111a22] px-4 min-h-[72px] py-2 container-centered">
+
         <div class="text-white flex items-center justify-center rounded-lg bg-[#243647] shrink-0 size-12" data-icon="Video" data-size="24px" data-weight="regular">
           <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
             <path
@@ -73,34 +97,30 @@
             ></path>
           </svg>
         </div>
+
         <div class="flex flex-col justify-center">
-          <p class="text-white text-base font-medium leading-normal line-clamp-1">Front door</p>
+          <p class="text-white text-base font-medium leading-normal line-clamp-1">Garden door</p>
           <p class="text-[#93adc8] text-sm font-normal leading-normal line-clamp-2">10:53AM</p>
         </div>
+
         </div>
+
         <h2 class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 container-centered">Change passcode</h2>
-        <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3 container-centered">
-        <label class="flex flex-col min-w-40 flex-1">
-          <input
-            placeholder="Current passcode"
-            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#243647] focus:border-none h-14 placeholder:text-[#93adc8] p-4 text-base font-normal leading-normal"
-            value=""
-          />
-        </label>
-        </div>
+
         <div class="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3 container-centered">
         <label class="flex flex-col min-w-40 flex-1">
           <input
             placeholder="New passcode"
-            class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#243647] focus:border-none h-14 placeholder:text-[#93adc8] p-4 text-base font-normal leading-normal"
+            class="newPasscode form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl text-white focus:outline-0 focus:ring-0 border-none bg-[#243647] focus:border-none h-14 placeholder:text-[#93adc8] p-4 text-base font-normal leading-normal"
             value=""
           />
         </label>
         </div>
+
         <div class="flex justify-center container-centered">
         <div class="flex flex-1 gap-3 flex-wrap px-4 py-3 max-w-[480px] justify-center">
           <button
-            class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[#1466b8] text-white text-base font-bold leading-normal tracking-[0.015em] grow"
+            class="SavePassBtn flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 bg-[#1466b8] text-white text-base font-bold leading-normal tracking-[0.015em] grow"
           >
             <span class="truncate">Save</span>
           </button>
@@ -111,9 +131,10 @@
           </button>
         </div>
         </div>
+
         <div class="h-5 bg-[#111a22] container-centered"></div>
       </div>
     </div>
-    <script src="dashboard.js"></script>
+    <script type="module" src="dashboard.js"></script>
   </body>
 </html>

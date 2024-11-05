@@ -1,0 +1,129 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #111a22;
+    font-family: "Public Sans", "Noto Sans", sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #111a22;
+    padding: 1rem;
+  }
+  
+  .header h2 {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    flex: 1;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .header h2 {
+      font-size: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header h2 {
+      font-size: 0.875rem;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+  }
+  
+  /* Estilos de botones */
+  .button {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #1a2b3c;
+    color: #ffffff;
+  }
+}
+
+/* Ajustar el tamaño del encabezado y botones para pantallas más pequeñas */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2rem; /* reducir el tamaño del texto principal en móviles */
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .button {
+    font-size: 0.875rem; /* ajustar el tamaño del texto en los botones */
+  }
+
+  .flex {
+    padding: 2px; /* reducir relleno general */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para tablets */
+  .button {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.container {
+  max-width: 100%; /* Asegurar que el contenido no desborde la pantalla en móviles */
+  padding: 10px; /* Añadir relleno en los bordes */
+}
+
+
+.button {
+  width: 100%; /* Hacer que los botones ocupen todo el ancho del contenedor */
+  padding: 1rem; /* Aumentar el relleno en móviles */
+}
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 768px) {
+  main {
+    min-height: calc(100vh - 100px); /* Asegurar que el contenido ocupe la mayor parte de la pantalla */
+    justify-content: center; /* Centrar el formulario verticalmente */
+    padding: 20px;
+  }
+
+  .max-w-md {
+    max-width: 100%; /* Ocupa más espacio en pantallas móviles */
+  }
+
+  form {
+    padding: 0 1rem; /* Reducir el padding para móviles */
+  }
+
+  .p-8 {
+    padding: 2rem 1rem; /* Ajustar el padding del contenedor */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Ajustar el tamaño del título en móviles */
+  }
+
+  .signInButton {
+    padding: 0.75rem; /* Aumentar el tamaño del botón para mejor usabilidad en móviles */
+  }
+}
